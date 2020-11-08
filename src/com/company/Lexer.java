@@ -63,7 +63,7 @@ public class Lexer {
         lexems.add(token);
     }
 
-    public void eatLine(String l)
+    public void process(String l)
     {
         String line = l.trim();
         inQuotes = false;
