@@ -13,11 +13,11 @@ public class Lexer {
             "long|for|while|do|void|goto|auto|signed|const|extern|register|" +
             "unsigned|return|continue|enum|sizeof|struct|typedef";
     private String directive = "#include|#define|#undef|#ifdef|#ifndef|#if|#else|#elif|#endif|#error|#pragma";
-    private String witespace = "\\s";
+    private String whitespace = "\\s";
     private String header = "<[A-Za-z]+>";
     private String number = "\\b\\d+\n|\\b\\d+.\\d+|\\b\\d+e\\d+|\\b[\\dA-Fa-f]+";
     private String operator = ">=|!=|\\+\\+|--|==|\\+=|-=|\\*=|/=|<=|\\+|-|=|\\*|%|/|>|<|!|\\^|&|\\|?";
-    private String punctation = "\\(|\\)|\\[|\\]|\\{|}|,|;|:";
+    private String punctuation = "\\(|\\)|\\[|\\]|\\{|}|,|;|:";
     private String quote = "\"";
     private String lineComment = "\\\\";
     private String startComment = "/\\*";
@@ -103,14 +103,14 @@ public class Lexer {
                 inQuotes = true;
                 word.append(line.charAt(i));
             }
-            else if (Character.toString(line.charAt(i)).matches(punctation))
+            else if (Character.toString(line.charAt(i)).matches(punctuation))
             {
                 if (word.length() != 0)
                 {
                     addWord(word);
                     word = new StringBuilder();
                 }
-                Token token = new Token(Lexem.PUNCTATION, Character.toString(line.charAt(i)));
+                Token token = new Token(Lexem.PUNCTUATION, Character.toString(line.charAt(i)));
                 lexems.add(token);
             }
             else if (Character.toString(line.charAt(i)).matches(operator))
@@ -144,7 +144,7 @@ public class Lexer {
                     lexems.add(token);
                 }
             }
-            else if ((Character.toString(line.charAt(i)).matches(witespace)))
+            else if ((Character.toString(line.charAt(i)).matches(whitespace)))
             {
                 if (word.length() != 0)
                 {

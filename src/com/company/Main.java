@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try {
-            File myObj = new File("program.с");
+            File myObj = new File("program.c");
             Scanner reader = new Scanner(myObj);
             Lexer lexer = new Lexer();
             while (reader.hasNextLine())

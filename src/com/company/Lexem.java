@@ -6,7 +6,7 @@ public enum Lexem {
     DIRECTIVE,
     RESERVED,
     OPERATOR,
-    PUNCTATION,
+    PUNCTUATION,
     IDENTIFIER,
     ERROR,
     HEADER

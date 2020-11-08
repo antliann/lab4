@@ -4,8 +4,8 @@
 int main() {
     int num, i;
 
-	char[] question = "How much wood would a woodchuck chuck?;
-    char xyz5 = 'More than 1 in char';
+	char[] question = "How much wood would a woodchuck chuck?";
+    char xyz5 = 'Ababagalamaga';
 
     for (i = 1; i <= num; ++i) {
         if (num % i == 0) {
