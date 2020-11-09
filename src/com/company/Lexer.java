@@ -16,8 +16,8 @@ public class Lexer {
     private String whitespace = "\\s";
     private String header = "<[A-Za-z]+>";
     private String number = "\\b\\d+\n|\\b\\d+.\\d+|\\b\\d+e\\d+|\\b[\\dA-Fa-f]+";
-    private String operator = ">=|!=|\\+\\+|--|==|\\+=|-=|\\*=|/=|<=|\\+|-|=|\\*|%|/|>|<|!|\\^|&|\\|?";
-    private String punctuation = "\\(|\\)|\\[|\\]|\\{|}|,|;|:";
+    private String operator = ">=|!=|\\+\\+|--|==|\\+=|-=|\\*=|/=|<=|\\+|-|=|\\*|%|/|>|<|!|\\^|&|\\|?|;|\\{|}";
+    private String punctuation = "\\(|\\)|\\[|\\]|,|:";
     private String quote = "\"";
     private String lineComment = "\\\\";
     private String startComment = "/\\*";

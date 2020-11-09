@@ -33,7 +33,5 @@ int main() {
         struct Countries Country1;
         struct Countries Country2;
 
-        Country1.name = "Brazil";
-
         return 0;
     }
